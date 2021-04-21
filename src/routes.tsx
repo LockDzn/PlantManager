@@ -7,6 +7,7 @@ import colors from './styles/colors'
 import Welcome from './pages/Welcome'
 import UserIdentification from './pages/UserIdentification'
 import Confirmation from './pages/Confirmation'
+import PlantSelect from './pages/PlantSelect'
 
 const AppStack = createStackNavigator()
 
@@ -27,6 +28,7 @@ const Routes = () => {
           component={UserIdentification}
         />
         <AppStack.Screen name="Confirmation" component={Confirmation} />
+        <AppStack.Screen name="PlantSelect" component={PlantSelect} />
       </AppStack.Navigator>
     </NavigationContainer>
   )
