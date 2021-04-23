@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
+import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-import { Keyboard, Platform, TouchableWithoutFeedback } from 'react-native'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import Button from '../../components/Button'
 
 import { Container, Title, Input, Emoji, Header, Wrapper } from './styles'
 
-const Confirmation = () => {
+const UserIdentification = () => {
   const [isFocused, setIsFocused] = useState(false)
   const [isFailed, setIsFailed] = useState(false)
   const [name, setName] = useState('')
@@ -29,7 +30,17 @@ const Confirmation = () => {
   }
 
   function handleSubmit() {
-    navigation.navigate('Confirmation')
+    if (!name) return
+
+    AsyncStorage.setItem('@plantmanager:username', name)
+    navigation.navigate('Confirmation', {
+      title: 'Prontinho',
+      subTile:
+        'Agora vamos começar a cuidar das suas plantinhas com muito cuidado.',
+      buttonTitle: 'Começar',
+      icon: 'smile',
+      nextPage: 'PlantSelect',
+    })
   }
 
   return (
@@ -59,4 +70,4 @@ const Confirmation = () => {
   )
 }
 
-export default Confirmation
+export default UserIdentification

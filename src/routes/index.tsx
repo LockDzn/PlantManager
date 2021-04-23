@@ -2,12 +2,16 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from '@react-navigation/native'
 
-import colors from './styles/colors'
+import colors from '../styles/colors'
 
-import Welcome from './pages/Welcome'
-import UserIdentification from './pages/UserIdentification'
-import Confirmation from './pages/Confirmation'
-import PlantSelect from './pages/PlantSelect'
+import Welcome from '../pages/Welcome'
+import UserIdentification from '../pages/UserIdentification'
+import Confirmation from '../pages/Confirmation'
+import PlantSelect from '../pages/PlantSelect'
+import PlantSave from '../pages/PlantSave'
+import MyPlants from '../pages/MyPlants'
+
+import AuthRoutes from './tabs.routes'
 
 const AppStack = createStackNavigator()
 
@@ -28,7 +32,9 @@ const Routes = () => {
           component={UserIdentification}
         />
         <AppStack.Screen name="Confirmation" component={Confirmation} />
-        <AppStack.Screen name="PlantSelect" component={PlantSelect} />
+        <AppStack.Screen name="PlantSelect" component={AuthRoutes} />
+        <AppStack.Screen name="PlantSave" component={PlantSave} />
+        <AppStack.Screen name="MyPlants" component={AuthRoutes} />
       </AppStack.Navigator>
     </NavigationContainer>
   )

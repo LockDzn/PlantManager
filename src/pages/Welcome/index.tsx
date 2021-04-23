@@ -4,6 +4,7 @@ import { useNavigation } from '@react-navigation/core'
 import { Container, Title, SubTitle, Image, Touch, ArrowIcon } from './styles'
 
 import wateringImg from '../../assets/watering.png'
+import { clearPlants } from '../../libs/storage'
 
 const Welcome = () => {
   const navigation = useNavigation()
