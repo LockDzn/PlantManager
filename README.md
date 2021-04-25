@@ -5,7 +5,7 @@
   <p>
     <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/hmartiins/plantmanager?color=%232196F3">
     <a href="https://www.linkedin.com/in/henrique-martins-5b2bb71a5/" target="_blank" rel="noopener noreferrer">
-      <img alt="Made by" src="https://img.shields.io/badge/made%20by-Henrique%20Martins-%232196F3">
+      <img alt="Made by" src="https://img.shields.io/badge/made%20by-Ryan%20Souza-%232196F3">
     </a>          
     <img alt="GitHub" src="https://img.shields.io/github/license/hmartiins/plantmanager?color=%232196F3">
   </p>
@@ -47,8 +47,8 @@ Several places use plants, be it their home or business, and nowadays the human 
 *Clone the project and access the folder*
 
 ```bash
-$ git clone https://github.com/hmartiins/plantmanager 
-$ cd plantmanager
+$ git clone https://github.com/LockDzn/PlantManager
+$ cd PlantManager
 ```
 
 *Follow the steps below*
@@ -57,23 +57,9 @@ $ cd plantmanager
 # Install the dependencies
 $ yarn install
 
-# Make a copy of '.env.example' to '.env'
-# and set with YOUR environment variables.
-$ cp .env.example .env
-
 # Finally, run the api service in a development environment :)
 $ yarn start
 
 # Well done, PlantManager is started!
 ```
 <br>
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-<hr>
-<div align="center">
-  <sub>Copyright © 2021-present, hmartiins.</sub>
-</div>
-<hr>
